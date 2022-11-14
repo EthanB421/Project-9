@@ -1,0 +1,36 @@
+class Random {
+    static int gen;
+    
+    function void setgen(int newGen) {
+        let gen = newGen;
+        
+        return;
+    }
+
+    function int rand() {
+        let gen = gen + 3650;
+
+        if (gen < 0) {
+            let gen = gen - 4267 - 1;
+        }
+
+        return gen;
+    }
+
+    function int randRange(int range) {
+        var int lower;
+        var int res;
+
+        let lower = 1;
+        while (lower < range) {
+            let lower = lower * 2 + 1;
+        }
+        let res = Random.rand() & lower;
+        while (res > range) {
+            let res = Random.rand() & lower;
+        }
+
+        return res;
+    }
+
+}

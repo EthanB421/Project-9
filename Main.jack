@@ -1,0 +1,10 @@
+class Main{
+    function void Main(){
+        var Random randomNumber;
+        let randomNumber = Random.setgen(100);
+        
+        do Output.printString("The random number generated is: ");
+        do Output.printInt(randonNumber.rand());
+        return;
+    }
+}
